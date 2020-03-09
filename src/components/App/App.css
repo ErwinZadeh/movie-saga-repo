@@ -3,11 +3,12 @@
 }
 
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.header {
+  background-color: #30586b;
+  min-height: 70px;
   padding: 20px;
   color: white;
+  text-align: center;
 }
 
 .App-title {
@@ -21,4 +22,98 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.HomePageLayout {
+  text-align: center;
+  display: inline-flexbox;
+  list-style-type: none;
+  margin-left: 5em
+}
+
+.ListItemLayout {
+  display: flex;
+  text-align: left;
+  padding: 10px;
+}
+
+.DescriptionBox {
+  margin-left: 10em;
+  margin-right: 20em;
+  text-align: center;
+}
+
+.DetailBox {
+  margin-left: 20em;
+  margin-right: 20em;
+  text-align: center;
+}
+
+.editPage {
+  text-align: center
+}
+
+.genresUL {
+  list-style-type: none;
+  text-align: center;
+}
+
+.genresLI {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.editUL{
+  display: inline-flex;
+  text-align: center;
+  list-style-type: none;
+  padding: 1em
+}
+.center {
+  text-align: center;
+}
+
+.editLI{
+  padding: .5em;
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: #d8d2a2;
+}
+.cancelButton {
+  padding: .5em;
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: #d8d2a2;
+}
+
+.cancelButton:hover {
+  background-color: red;
+}
+
+.editLI:hover {
+  background-color: dodgerblue; 
+}
+
+.editTitle {
+  height: 2em;
+  width: 25em;
+  font-size: 1.5em;
+}
+
+.textArea {
+  height: 10em;
+  width: 25em;
+  font-size: 1.5em;
+}
+
+.genresList {
+  display: inline-flex;
+  list-style-type: none;
+  font-style: italic;
+  padding: .2em;
+  
+}
+.genresListItem {
+  padding: .2em;
+  font-size: 1.75em
 }

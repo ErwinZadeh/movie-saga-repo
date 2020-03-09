@@ -13,6 +13,7 @@ class App extends Component {
       <Router>
         <header className="header">
           <h1>Movie-Saga Weekend Assignment</h1>
+          <h3>by ERWIN ZADEH</h3>
         </header>
         <div>
           <Route exact path="/" component={Movies} />
