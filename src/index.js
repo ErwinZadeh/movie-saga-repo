@@ -16,6 +16,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('GET_MOVIES', getMovies)
+    yield takeEvery('GET_GENRES', getGenres)
 }
 
 // Get the movies from the server with axios using a generator function/saga
@@ -29,6 +30,18 @@ function* getMovies(action) {
     
 }
 
+// this generator function gets the details of the specific movie clicked on as well as it's genres
+function* getGenres(action) {
+    try {
+        let id = action.payload.id
+    yield put({ type: 'MOVIE_DETAIL', payload: action.payload })
+    let response = yield axios.get(`api/genres?id=${id}`);
+    yield put({ type: 'SET_GENRES', payload: response.data });
+    } catch (error) {
+        alert('Error geting movie details or genres', error)
+    }
+    
+}
 
 // Create sagaMiddleware
 const sagaMiddleware = createSagaMiddleware();
