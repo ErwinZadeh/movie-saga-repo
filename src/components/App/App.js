@@ -3,8 +3,8 @@ import './App.css';
 import { connect } from 'react-redux'
 import { HashRouter as Router, Route, } from 'react-router-dom';
 import Movies from '../Movies/Movies.jsx'
-import Details from '../Details/Details'
-
+import Details from '../Details/Details.jsx'
+import Edit from '../Edit/Edit.jsx'
 
 class App extends Component {
   // Renders the entire app on the DOM, organizes the routes
@@ -17,6 +17,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Movies} />
           <Route exact path="/details" component={Details} />
+          <Route exact path="/edit" component={Edit} />
         </div>
       </Router>
     );
