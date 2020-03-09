@@ -78,3 +78,5 @@ SELECT "movies".title, "genres".name from "movies"
 JOIN "movies_genres" on "movies".id = "movies_genres".movies_id
 JOIN "genres" on "movies_genres".genres_id = "genres".id
 WHERE "movies".id = $1;
+
+UPDATE "movies" SET "title" = $1, "description" = $2 WHERE "id" = $3;
